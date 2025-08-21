@@ -1,0 +1,12 @@
+com/recipe/repository/RecipeRepository.class
+com/recipe/controller/RecipeController.class
+com/recipe/dto/RecipeResponseDTO.class
+com/recipe/service/RecipeDataLoaderService$1.class
+com/recipe/service/RecipeService.class
+com/recipe/config/JacksonConfig.class
+com/recipe/dto/PagedResponseDTO.class
+com/recipe/service/RecipeDataLoaderService.class
+com/recipe/controller/DataLoaderController.class
+com/recipe/RecipeManagementApplication.class
+com/recipe/util/JsonDataLoader.class
+com/recipe/model/Recipe.class

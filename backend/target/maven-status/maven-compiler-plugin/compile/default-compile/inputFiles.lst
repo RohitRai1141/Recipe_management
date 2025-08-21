@@ -1,0 +1,11 @@
+/home/rohitrai/storage/exam1/project (2)/backend/src/main/java/com/recipe/config/JacksonConfig.java
+/home/rohitrai/storage/exam1/project (2)/backend/src/main/java/com/recipe/service/RecipeDataLoaderService.java
+/home/rohitrai/storage/exam1/project (2)/backend/src/main/java/com/recipe/repository/RecipeRepository.java
+/home/rohitrai/storage/exam1/project (2)/backend/src/main/java/com/recipe/RecipeManagementApplication.java
+/home/rohitrai/storage/exam1/project (2)/backend/src/main/java/com/recipe/service/RecipeService.java
+/home/rohitrai/storage/exam1/project (2)/backend/src/main/java/com/recipe/util/JsonDataLoader.java
+/home/rohitrai/storage/exam1/project (2)/backend/src/main/java/com/recipe/dto/PagedResponseDTO.java
+/home/rohitrai/storage/exam1/project (2)/backend/src/main/java/com/recipe/controller/RecipeController.java
+/home/rohitrai/storage/exam1/project (2)/backend/src/main/java/com/recipe/dto/RecipeResponseDTO.java
+/home/rohitrai/storage/exam1/project (2)/backend/src/main/java/com/recipe/controller/DataLoaderController.java
+/home/rohitrai/storage/exam1/project (2)/backend/src/main/java/com/recipe/model/Recipe.java

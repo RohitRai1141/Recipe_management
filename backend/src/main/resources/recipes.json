@@ -1,0 +1,65 @@
+{
+  "1": {
+    "title": "Chicken Curry",
+    "cuisine": "Indian",
+    "description": "A delicious and spicy chicken curry with aromatic spices",
+    "rating": 4.5,
+    "prep_time": 15,
+    "cook_time": 30,
+    "total_time": 45,
+    "serves": "4",
+    "nutrients": {
+      "calories": "350",
+      "carbohydrateContent": "12g",
+      "cholesterolContent": "85mg",
+      "fiberContent": "3g",
+      "proteinContent": "28g",
+      "saturatedFatContent": "4g",
+      "sodiumContent": "650mg",
+      "sugarContent": "6g",
+      "fatContent": "18g"
+    }
+  },
+  "2": {
+    "title": "Pasta Carbonara",
+    "cuisine": "Italian",
+    "description": "Classic Italian pasta with eggs, cheese, and pancetta",
+    "rating": 4.8,
+    "prep_time": 10,
+    "cook_time": 15,
+    "total_time": 25,
+    "serves": "2",
+    "nutrients": {
+      "calories": "520",
+      "carbohydrateContent": "45g",
+      "cholesterolContent": "180mg",
+      "fiberContent": "2g",
+      "proteinContent": "22g",
+      "saturatedFatContent": "8g",
+      "sodiumContent": "890mg",
+      "sugarContent": "3g",
+      "fatContent": "28g"
+    }
+  },
+  "3": {
+    "title": "Vegetable Stir Fry",
+    "cuisine": "Asian",
+    "description": "Fresh vegetables stir-fried with soy sauce and garlic",
+    "rating": 4.2,
+    "prep_time": 10,
+    "cook_time": 8,
+    "total_time": 18,
+    "serves": "3",
+    "nutrients": {
+      "calories": "180",
+      "carbohydrateContent": "25g",
+      "cholesterolContent": "0mg",
+      "fiberContent": "6g",
+      "proteinContent": "8g",
+      "saturatedFatContent": "1g",
+      "sodiumContent": "420mg",
+      "sugarContent": "12g",
+      "fatContent": "6g"
+    }
+  }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Recipe Management</h1>
+        </header>
+
+        <!-- Search and Filters -->
+        <div class="filters-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search recipes by title...">
+                <button onclick="applyFilters()">Search</button>
+            </div>
+            
+            <div class="filters">
+                <select id="cuisineFilter">
+                    <option value="">All Cuisines</option>
+                    <option value="Southern Recipes">Southern Recipes</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Asian">Asian</option>
+                    <option value="Mexican">Mexican</option>
+                </select>
+                
+                <input type="number" id="maxCaloriesFilter" placeholder="Max Calories" min="0">
+                
+                <input type="number" id="maxTimeFilter" placeholder="Max Time (min)" min="0">
+                
+                <select id="minRatingFilter">
+                    <option value="">Any Rating</option>
+                    <option value="4.5">4.5+ Stars</option>
+                    <option value="4">4+ Stars</option>
+                    <option value="3.5">3.5+ Stars</option>
+                    <option value="3">3+ Stars</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loading" class="loading hidden">Loading recipes...</div>
+
+        <!-- Error State -->
+        <div id="errorMessage" class="error-message hidden">
+            <h3>Oops! Something went wrong</h3>
+            <p>Unable to load recipes. Please try again later.</p>
+            <button onclick="loadRecipes()">Retry</button>
+        </div>
+
+        <!-- No Results State -->
+        <div id="noResults" class="no-results hidden">
+            <h3>No recipes found</h3>
+            <p>Try adjusting your search criteria or filters.</p>
+        </div>
+
+        <!-- Recipes Table -->
+        <div id="recipesContainer">
+            <table id="recipesTable" class="recipes-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Cuisine</th>
+                        <th>Rating</th>
+                        <th>Total Time</th>
+                        <th>Serves</th>
+                    </tr>
+                </thead>
+                <tbody id="recipesTableBody">
+                    <!-- Recipe rows will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <div class="pagination-info">
+                <span id="paginationInfo">Showing 0-0 of 0 recipes</span>
+            </div>
+            <div class="pagination-controls">
+                <button id="prevBtn" onclick="changePage(-1)" disabled>Previous</button>
+                <span id="pageNumbers"></span>
+                <button id="nextBtn" onclick="changePage(1)" disabled>Next</button>
+            </div>
+            <div class="page-size-selector">
+                <label>Show: 
+                    <select id="pageSize" onchange="changePageSize()">
+                        <option value="15">15</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                    </select>
+                    per page
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recipe Detail Drawer -->
+    <div id="recipeDrawer" class="recipe-drawer">
+        <div class="drawer-overlay" onclick="closeDrawer()"></div>
+        <div class="drawer-content">
+            <button class="close-btn" onclick="closeDrawer()">&times;</button>
+            <div class="drawer-header">
+                <h2 id="drawerTitle"></h2>
+                <p class="drawer-cuisine" id="drawerCuisine"></p>
+            </div>
+            <div class="drawer-body">
+                <div class="recipe-details">
+                    <div class="detail-item">
+                        <strong>Description:</strong>
+                        <p id="drawerDescription"></p>
+                    </div>
+                    <div class="time-details">
+                        <div class="time-item">
+                            <strong>Total Time:</strong>
+                            <span id="drawerTotalTime"></span>
+                        </div>
+                        <div class="time-expandable">
+                            <span class="expand-icon" onclick="toggleTimeDetails()">▼</span>
+                            <div class="time-breakdown hidden">
+                                <div><strong>Prep Time:</strong> <span id="drawerPrepTime"></span></div>
+                                <div><strong>Cook Time:</strong> <span id="drawerCookTime"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="nutrition-section">
+                    <h3>Nutrition Information</h3>
+                    <div class="nutrition-grid" id="nutritionGrid">
+                        <!-- Nutrition info will be inserted here -->
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
